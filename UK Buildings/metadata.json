@@ -1,0 +1,5 @@
+{
+  "name": "UK Building Utility Demand Estimator",
+  "description": "An application to estimate electricity, gas, and water utility demands for various building types in the UK, based on CIBSE benchmarks and user-provided inputs.",
+  "requestFramePermissions": []
+}
