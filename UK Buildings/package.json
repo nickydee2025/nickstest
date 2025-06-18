@@ -1,20 +1,18 @@
 {
   "name": "uk-building-utility-demand-estimator",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "typescript": "~5.7.2",
-    "vite": "^6.2.0"
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "echo \"Build: This project primarily uses CDN imports (React, Tailwind, html2pdf) and expects index.tsx to be handled by the serving environment or a pre-transpilation step. If deployment fails, a build step to convert TSX to JS might be needed.\"",
+    "start": "echo \"Start: No explicit start script for these static files. Serve index.html via an HTTP server.\""
   }
 }
