@@ -9,10 +9,11 @@
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "esbuild": "^0.20.2"
   },
   "scripts": {
-    "build": "echo \"Build: This project primarily uses CDN imports (React, Tailwind, html2pdf) and expects index.tsx to be handled by the serving environment or a pre-transpilation step. If deployment fails, a build step to convert TSX to JS might be needed.\"",
-    "start": "echo \"Start: No explicit start script for these static files. Serve index.html via an HTTP server.\""
+    "build": "rm -rf dist && mkdir dist && esbuild index.tsx --bundle --outfile=dist/index.js --platform=browser --format=esm --jsx=automatic --external:react --external:react-dom --external:react-dom/client --external:react/jsx-runtime && cp index.html dist/",
+    "start": "echo \"Start: Serve the 'dist' directory via an HTTP server after running 'npm run build'.\""
   }
 }
